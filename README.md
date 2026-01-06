@@ -79,11 +79,11 @@ Ranking metrics (PR-AUC/ROC-AUC) are threshold-free; precision/recall/flag-rate 
 
 Summary (SVM, test set, by age band):
 
-Operating metrics at a fixed threshold are not uniform across ages. Recall varies meaningfully by age band (peaks around [20–30) and stays high in several older bands), while precision stays low across bands (expected under class imbalance). This implies a fixed threshold yields different sensitivity across subgroups.
-    
-Ranking quality differs by age band. PR-AUC is highest for [20–30) and generally declines in older bands, while ROC-AUC also trends downward with age. This suggests the model separates positives from negatives better in some age groups than others, not just a threshold effect.
-    
-Small-sample bands are unstable. The youngest bands have very small n / few positives, making estimates noisy (and in some bands metrics can be undefined or unreliable).
+  - Operating metrics at a fixed threshold are not uniform across ages. Recall varies meaningfully by age band (peaks around [20–30) and stays high in several older bands), while precision stays low across bands (expected under class imbalance). This implies a fixed threshold yields different sensitivity across subgroups.
+      
+  - Ranking quality differs by age band. PR-AUC is highest for [20–30) and generally declines in older bands, while ROC-AUC also trends downward with age. This suggests the model separates positives from negatives better in some age groups than others, not just a threshold effect.
+      
+  - Small-sample bands are unstable. The youngest bands have very small n / few positives, making estimates noisy (and in some bands metrics can be undefined or unreliable).
 
 ## SQL mini (data fluency)
 Loaded features and labels into SQLite and wrote queries (rates by subgroup, risk by LOS, discharge disposition, confusion matrix for a rule-based baseline, etc.).
